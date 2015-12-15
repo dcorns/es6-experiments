@@ -39,6 +39,23 @@ module.exports = function(){
       catch(e){
         console.log('const is block scoped\n' + e.message)
       }
+    },
+    testSpread: function(){
+      //for function arguments
+      var names = ['Fred', 'Barney', 'BamBam'];
+      function bedrockBoys(a, b, c){
+        console.log(a, b, c);
+      }
+      bedrockBoys(...names);
+      //Use in array literals to insert arrays
+      var names2 = ['Wilma',...names, 'Betty', 'Pebbles'];
+      console.log(names2);
+      console.log(names2.length);
+      //How about extracting all the letters
+      var letters = [...names[0]];
+      console.log(letters);
+
     }
+
   };
 }();
