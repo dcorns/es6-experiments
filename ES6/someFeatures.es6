@@ -46,6 +46,7 @@ module.exports = function(){
       function bedrockBoys(a, b, c){
         console.log(a, b, c);
       }
+      //instead of bedrockBoys.apply(null, names);
       bedrockBoys(...names);
       //Use in array literals to insert arrays
       var names2 = ['Wilma',...names, 'Betty', 'Pebbles'];
@@ -54,7 +55,13 @@ module.exports = function(){
       //How about extracting all the letters
       var letters = [...names[0]];
       console.log(letters);
-
+      //Use to apply where apply can not be used, like with a constructor
+      var data = [2000, 0, 1];
+      var d = new Date(...data);
+      console.log(d);
+      //Pushing arrays to the end of arrays Array.prototype.push.apply(names, ['Wilma', 'Betty', 'Pebbles']);
+      names.push(...['Wilma', 'Betty', 'Pebbles']);
+      console.log(names);
     }
 
   };
