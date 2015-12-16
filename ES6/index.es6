@@ -5,3 +5,4 @@ var someFeatures = require('./someFeatures.js');
 someFeatures.testLet();
 someFeatures.testConst();
 someFeatures.testSpread();
+someFeatures.objectLiteralExtensions();
